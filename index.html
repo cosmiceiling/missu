@@ -49,15 +49,6 @@
       margin-bottom: 0.5em;
     }
 
-    iframe {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 0;
-      height: 0;
-      border: none;
-    }
-
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
@@ -67,14 +58,21 @@
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
+    audio {
+      display: none;
+    }
   </style>
 </head>
 <body>
-  <!-- Musik YouTube Embed Otomatis -->
-  <iframe src="https://www.youtube.com/embed/fT7Z1onQpUA?autoplay=1&loop=1&playlist=fT7Z1onQpUA" allow="autoplay"></iframe>
+  <!-- Autoplay Musik Lokal -->
+  <audio autoplay loop>
+    <source src="wwd.mp3juice.blog - James Arthur - A Year Ago (320 KBps) (1).mp3" type="audio/mp3">
+    Browsermu tidak mendukung audio.
+  </audio>
 
   <h1>Pernyataan Rasa Rindu</h1>
-  <p style="text-align:center"><strong>Kepada:</strong> Kamu, yang senyumnya masih tinggal di ingatanku<br>
+  <p style="text-align:center"><strong>Kepada:</strong> Triana, yang senyumnya masih tinggal di ingatanku<br>
   <strong>Dari:</strong> Aku, yang hatinya masih menetap padamu</p>
 
   <section>
