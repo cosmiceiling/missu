@@ -59,7 +59,6 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Tombol Play/Pause */
     #audio-controls {
       position: fixed;
       top: 10px;
@@ -89,8 +88,8 @@
     <button id="toggleAudio">⏸ Pause</button>
   </div>
 
-  <!-- Musik Autoplay -->
-  <audio id="bgMusic" autoplay loop>
+  <!-- Musik dengan autoplay yang dimaksimalkan -->
+  <audio id="bgMusic" autoplay loop muted>
     <source src="wwd.mp3juice.blog - James Arthur - A Year Ago (320 KBps) (1).mp3" type="audio/mp3">
     Browsermu tidak mendukung audio.
   </audio>
@@ -116,7 +115,7 @@
     <h2>Dasar Pemikiran</h2>
     <ul>
       <li>Kamu selalu hadir di sela-sela pikiranku, bahkan tanpa aku undang.</li>
-      <li>Karena ya setiap hal kecil ntah apapun itu—selalu berhasil mengingatkanku padamu.</li>
+      <li>Karena ya ntah apapun itu—selalu berhasil mengingatkanku padamu.</li>
       <li>Karena… ya, karena kamu.</li>
     </ul>
   </section>
@@ -136,10 +135,17 @@
     </div>
   </section>
 
-  <!-- Script untuk toggle audio -->
   <script>
     const audio = document.getElementById('bgMusic');
     const toggleBtn = document.getElementById('toggleAudio');
+
+    window.addEventListener('DOMContentLoaded', () => {
+      // Nonaktifkan muted agar bisa play dengan suara
+      audio.muted = false;
+      audio.play().catch(() => {
+        console.log("Autoplay mungkin diblokir oleh browser.");
+      });
+    });
 
     toggleBtn.addEventListener('click', () => {
       if (audio.paused) {
@@ -151,5 +157,6 @@
       }
     });
   </script>
+
 </body>
 </html>
