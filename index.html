@@ -6,8 +6,8 @@
   <style>
     body {
       font-family: 'Georgia', serif;
-      background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
-      color: #4b2c3b;
+      background: #111;
+      color: #f0f0f0;
       padding: 3em;
       max-width: 700px;
       margin: auto;
@@ -16,7 +16,7 @@
     }
 
     h1, h2 {
-      color: #c71585;
+      color: #bbbbbb;
       text-align: center;
       animation: fadeInUp 1s ease forwards;
     }
@@ -39,15 +39,23 @@
 
     blockquote {
       font-style: italic;
-      background: #fff;
-      border-left: 5px solid #c71585;
+      border-left: 5px solid #444;
       padding: 1em;
       margin: 1em 0;
-      background-color: #ffeef5;
+      background-color: #222;
     }
 
     ul li {
       margin-bottom: 0.5em;
+    }
+
+    iframe {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border: none;
     }
 
     @keyframes fadeIn {
@@ -59,17 +67,11 @@
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
-    audio {
-      display: none;
-    }
   </style>
 </head>
 <body>
-  <audio autoplay loop>
-    <source src="https://www.bensound.com/bensound-music/bensound-slowmotion.mp3" type="audio/mp3">
-    Browsermu tidak mendukung audio.
-  </audio>
+  <!-- Musik YouTube Embed Otomatis -->
+  <iframe src="https://www.youtube.com/embed/fT7Z1onQpUA?autoplay=1&loop=1&playlist=fT7Z1onQpUA" allow="autoplay"></iframe>
 
   <h1>Pernyataan Rasa Rindu</h1>
   <p style="text-align:center"><strong>Kepada:</strong> Kamu, yang senyumnya masih tinggal di ingatanku<br>
